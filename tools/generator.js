@@ -9,7 +9,7 @@ module.exports = {
         option: 'create-sst-template',
         defaultCase: '(pascalCase)',
         entry: {
-          folderPath: './tools/templates/sst-template-rest-api'
+          folderPath: 'tools/templates/sst-template-rest-api'
         },
         dynamicReplacers: [
           {
