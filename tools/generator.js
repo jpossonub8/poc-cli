@@ -22,6 +22,7 @@ module.exports = {
         },
         onComplete: (results) => {
           console.log('results', results)
+          console.log('Done!')
         },
       }
     ]).catch((err) => {

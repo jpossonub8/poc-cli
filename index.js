@@ -33,7 +33,6 @@ program
   .action((name) => {
     console.log(`Creando el proyecto ${name}`);
     generate.componentWithInterface(name)
-    console.log("Done!");
   });
 
 // Parsea los argumentos y opciones
