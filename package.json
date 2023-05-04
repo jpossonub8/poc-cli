@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/jpossonub8/poc-cli#readme",
   "dependencies": {
-    "commander": "^10.0.1"
-  },
-  "devDependencies": {}
+    "commander": "^10.0.1",
+    "generate-template-files": "^3.2.1"
+  }
 }
