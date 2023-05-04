@@ -1,14 +1,14 @@
 {
-  "dependencies": {
-    "commander": "^10.0.1"
-  },
   "name": "poc-cli",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
+    "nub8-cli": "nub8-cli",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "nub8-cli": "./index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +19,9 @@
   "bugs": {
     "url": "https://github.com/jpossonub8/poc-cli/issues"
   },
-  "homepage": "https://github.com/jpossonub8/poc-cli#readme"
+  "homepage": "https://github.com/jpossonub8/poc-cli#readme",
+  "dependencies": {
+    "commander": "^10.0.1"
+  },
+  "devDependencies": {}
 }
