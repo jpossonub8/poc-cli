@@ -12,6 +12,7 @@ program
     console.log(`Hola, ${program.opts().name}!`);
   });
   
+// npx github:jpossonub8/poc-cli create-sst bacao
 program
   .command('create-sst <name>')
   .description('Crea un proyecto de plantilla con la ultima versión de SST')
@@ -29,7 +30,7 @@ program
   .command('create-sst-template <name>')
   .description('Crea un proyecto de plantilla con la ultima versión de SST')
   .action((name) => {
-    const command = `node ./tools/generator.js create-sst-template __name__=${name} --overwrite`;
+    const command = `node tools/generator.js create-sst-template __name__=${name} --overwrite`;
     console.log(`Creando el proyecto ${name}`);
     console.log(`Running: ${command}`);
     execSync(command);
