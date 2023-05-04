@@ -9,7 +9,7 @@ module.exports = {
         option: 'create-sst-template',
         defaultCase: '(pascalCase)',
         entry: {
-          folderPath: './tools/templates'
+          folderPath: './tools/templates/sst-template-rest-api'
         },
         dynamicReplacers: [
           {
@@ -17,13 +17,16 @@ module.exports = {
           }
         ],
         output: {
-          path: './',
+          path: './__name__SnakeCase__',
           pathAndFileNameDefaultCase: '(SnakeCase)'
         },
         onComplete: (results) => {
           console.log('results', results)
-        }, 
+        },
       }
-    ])
+    ]).catch((err) => {
+      console.log('Build Error');
+      console.error(err);
+    });
   }
 }
