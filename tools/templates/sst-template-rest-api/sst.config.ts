@@ -1,14 +1,16 @@
 import { SSTConfig } from "sst";
-import { API } from "./stacks/MyStack";
+import { Api } from "./stacks/Api";
+import { Database } from "./stacks/Database";
 
 export default {
   config(_input) {
     return {
-      name: "bacao",
+      name: "__name__KebabCase__",
       region: "us-east-1",
     };
   },
   stacks(app) {
-    app.stack(API);
+    app.stack(Api)
+       .stack(Database);
   }
 } satisfies SSTConfig;
