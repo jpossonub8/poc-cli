@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { program } = require('commander');
 const { execSync } = require("child_process");
+const generate = require('./tools/generator.js');
 
 // Configura el comando raíz
 program
@@ -30,10 +31,8 @@ program
   .command('create-sst-template <name>')
   .description('Crea un proyecto de plantilla con la ultima versión de SST')
   .action((name) => {
-    const command = `node tools/generator.js create-sst-template __name__=${name} --outputpath=./src/here --overwrite`;
     console.log(`Creando el proyecto ${name}`);
-    console.log(`Running: ${command}`);
-    execSync(command);
+    generate.componentWithInterface(name)
     console.log("Done!");
   });
 
